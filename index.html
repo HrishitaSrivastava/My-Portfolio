@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hrishita Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/56aa70e602.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>
+                    Front-End Developer
+                </p>
+                <h1>Hi, I'm <span>Hrishita</span><br>Srivastava From India</h1>
+            </div>
+        </div>
+    </div>
+<!----------about------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/aboutme.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Welcome to my portfolio!</p>
+                    <p>I am Hrishita Srivastava, an enthusiastic and dedicated fresher with a strong passion for software develpoment.
+                        As I embark on my journey int the world of technology, this portfolio serves as a testament to my eagerness to learn, grow, and make a positive imact in the field of software development.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <!---<p class="tab-links">Skills</p>--->
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-End</span><br>Developing Webpages/sites</li>
+                            <li><span>App Develpoment</span><br>Web app Development</li>
+                            <li><span>Web Development</span><br>Building Android apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - 2024</span><br>Bachelor of Technology in Computer Science(Internet of things) from PSIT</li>
+                            <li><span>2020</span><br>Intermediate from Little Flower School</li>
+                            <li><span>2018</span><br>High School from Little Flower School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------projects------------------------------ -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-brands fa-watchman-monitoring"></i>   <!--Icons from font awesome-->
+                    <h2>Dementia Patient Monitoring System Using IoT</h2>
+                    <p>A device to steer dementia patients and their families to support while not being obsessed with others. There are facilities wherever they do their daily chores. The role of the caretaker is to ensure the patients don't do something wrong, absorb their food and pills properly, have a decent sleep, and monitor their behavior.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-fingerprint"></i>    <!--Icons from font awesome-->
+                    <h2>Fingerprint and Hex Keypad based attendance system</h2>
+                    <p>It is an IoT-based bio-metric attendance system that will store attendance records. It uses a dual security system to record attendance. A biometric scan turns each fingerprint into a one-of-a-kind entry code that can only be used by the employee or the student to whom the fingerprint belongs.</p>
+                    <a href="https://github.com/HrishitaSrivastava/Fingerprint-And-Hex-Keypad-Based-Attendance-System" target="_blank">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------------------------Contact--------------------------->
+    <div id = contact>
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="coding-profile">
+                <div class="profile"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
